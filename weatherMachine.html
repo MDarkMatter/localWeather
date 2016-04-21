@@ -59,8 +59,8 @@
         }
 
         function getWeather(x) {
-            $.getJSON( x, function(obj) {
-                        document.getElementById("temp").innerHTML = obj.main;
+            $.getJSON( x, function(obj) {                    
+                        $("#temp").html(obj.main.temp);
                     });
                 }
     </script>
