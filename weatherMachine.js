@@ -16,51 +16,56 @@ function getCoord(lat, lon) {
 
 function getWeather(url) {
     $.getJSON(url, function(obj) {
-        $("#temp").html(obj.main.temp);
+        $("#temp").html(Math.round(obj.main.temp) + '&#8457;');
+        $("#tempcels").html(Math.round((obj.main.temp-32)*(5/9)) + '&#8451;');
         $("#cond").html(obj.weather[0].id);
+        $("#city").html(obj.name);
         icon(obj.weather[0].id);
     });
 }
 
-// Group 2xx: Thunderstorm
-// Group 3xx: Drizzle
-// Group 5xx: Rain
-// Group 6xx: Snow
-// Group 7xx: Atmosphere (fog)
-// Group 800: Clear
-// Group 80x: Clouds
-
-// <div class="sunny"></div>
-// <div class="cloudy"></div>
-// <div class="rainy"></div>
-// <div class="snowy"></div>
-// <div class="rainbow"></div>
-// <div class="starry"></div>
-// <div class="stormy"></div>
-
 function icon(id){
-    //var hundreds = id.charAt(0);
     var hundo = String(id).charAt(0);
     switch (hundo) {
       case '2':
         $( "#icon" ).addClass( "stormy" );
+        $('body').css("background-image", "url('http://feelgrafix.com/data_images/out/16/905088-thunderstorm-wallpaper.jpg')");
         break;
       case "3":
-        $( "#icon" ).addClass( "rainy" );
-        break;
       case "5":
         $( "#icon" ).addClass( "rainy" );
+        $('body').css("background-image", "url('http://www.toasto.com/wp-content/uploads/2010/04/rainy-day-landscape.jpg')");
         break;
       case "6":
         $( "#icon" ).addClass( "snowy" );
+        $('body').css("background-image", "url('http://7-themes.com/data_images/out/70/7012333-sunset-snow-landscape.jpg')");
         break;
       case "7":
         $( "#icon" ).addClass( "cloudy" );
+        $('body').css("background-image", "url('http://www.socwall.com/images/wallpapers/8008-2816x1880.jpg')");
         break;
       case "8":
         $( "#icon" ).addClass( "sunny" );
+        $('body').css("background-image", "url('https://cdn.cloudpix.co/images/sunny/god-nature-green-landscape-paradise-peaceful-sky-sun-sunny-trees-98c724fc2708b0fbedbe09881341dcf2-large-632579.jpg')");
         break;
       default:
         $( "#icon" ).addClass( "rainbow" );
     }
+}
+
+// ------------Make Buttons Do Stuff
+
+function toF(){
+    $('#fBut').addClass('active');
+    $('#cBut').removeClass('active');
+    $('#temp').removeClass('hidden');
+    $('#tempcels').addClass('hidden');
+
+}
+
+function toC(){
+    $('#cBut').addClass('active');
+    $('#fBut').removeClass('active');
+    $('#temp').addClass('hidden');
+    $('#tempcels').removeClass('hidden');
 }

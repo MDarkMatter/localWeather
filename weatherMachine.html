@@ -21,27 +21,31 @@
 </head>
 
 <body>
-    <div class="container-fluid text-center">
-        <div class="row">
-            <h1>Weather</h1>
-        </div>
-        <div class="row">
-            <h1 id="temp"></h1>
-        </div>
-        <div class="row">
-
-        </div>
-
-        <div class="container">
+    <div class="container-fluid text-center well">
+            <div class="row ">
+                <h2>Local Weather</h2>
+            </div>
             <div class="row">
-                <h2 id='icon'></h2>
-                <h3>Fahrenheit or Celsius</h3>
-                Picture of weather
+                <h1 id="temp"></h1>
+            </div>
+            <div class="row">
+                <h1 id='tempcels' class='hidden'></h1>
+            </div>
+            <button type="button" id="fBut" class="btn btn-default active" onclick="toF()">
+                Fahrenheit
+            </button>
+            <button type="button" id="cBut" class="btn btn-default" onclick="toC()">
+                Celsius
+            </button>
+            <div class="row">
+                <h2 id='city'></h2>
             </div>
         </div>
 
+        <div class="row">
+            <h2 id='icon'></h2>
+        </div>
     </div>
-
 
 
 

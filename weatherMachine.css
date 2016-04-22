@@ -1,4 +1,26 @@
 
+body {
+    /*background-image: url('http://stockarch.com/files/11/09/rainy_landscape.jpg');*/
+    background-size: cover;
+    background-color: grey;
+}
+
+.container-fluid {
+    max-width: 500px;
+    opacity: 0.7;
+    border-radius: 50%;
+    margin-top: 28px;
+}
+
+#icon {
+    margin-left: 95px;
+    margin-top: 48px;
+}
+.well {
+    background-color: #606060;
+    border: none;
+    color: #e3e3e3;
+}
 /*These animated icons were found at https://codepen.io/fbrz/pen/iqtlk*/
 
 /* SUNNY */
@@ -385,8 +407,4 @@
     100% {
         box-shadow: rgba(238, 238, 238, 0) 30px 120px, rgba(238, 238, 238, 0) 40px 120px, #EEEEEE 50px 75px, #EEEEEE 55px 50px, #EEEEEE 70px 100px, #EEEEEE 80px 95px, #EEEEEE 110px 45px, #EEEEEE 90px 35px;
     }
-}
-
-body {
-    background-color: grey;
 }
