@@ -1,5 +1,4 @@
 # localWeather
 A weather one page challenge by FreeCodeCamp
 
-Animated weather icons found at:
-These animated icons were found at https://codepen.io/fbrz/pen/iqtlk
+Animated weather icons found at: https://codepen.io/fbrz/pen/iqtlk
