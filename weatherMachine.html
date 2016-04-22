@@ -10,6 +10,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="weatherMachine.css" media="screen" title="no title" charset="utf-8">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -26,22 +27,19 @@
         </div>
         <div class="row">
             <h1 id="temp"></h1>
-            <h3>Place to display Temp</h3>
         </div>
         <div class="row">
-            <div class="col-xs-4 col-xs-offset-4">
-                <div class="input-group">
-                    <input type="text" id="zip" class="form-control" placeholder="Enter your zip code">
-                    <span class="input-group-btn">
-                      <button class="btn btn-primary" type="button" onclick="getZip();">Go</button>
-                    </span>
-                </div>
+
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <h2 id='icon'></h2>
+                <h3>Fahrenheit or Celsius</h3>
+                Picture of weather
             </div>
         </div>
 
-        <div class="row">
-            Picture of weather
-        </div>
     </div>
 
 
@@ -51,19 +49,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
-    <script type="text/javascript">
-        function getZip() {
-            var zipcode = document.getElementById("zip").value;
-            var url = "http://api.openweathermap.org/data/2.5/weather?zip=" + zipcode + ",us&appid=7271d3292aac8f43062a11e66a3aa1b0"
-            getWeather(url);
-        }
-
-        function getWeather(x) {
-            $.getJSON( x, function(obj) {                    
-                        $("#temp").html(obj.main.temp);
-                    });
-                }
-    </script>
+    <script type="text/javascript" src='weatherMachine.js'></script>
 
 </body>
 
