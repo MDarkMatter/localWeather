@@ -29,7 +29,7 @@ function icon(id){
     switch (hundo) {
       case '2':
         $( "#icon" ).addClass( "stormy" );
-        $('body').css("background-image", "url('http://feelgrafix.com/data_images/out/16/905088-thunderstorm-wallpaper.jpg')");
+        $('body').css("background-image", "url('http://etinspires.com/wp-materials/uploads/2014/10/storms.jpg')");
         break;
       case "3":
       case "5":
@@ -38,11 +38,11 @@ function icon(id){
         break;
       case "6":
         $( "#icon" ).addClass( "snowy" );
-        $('body').css("background-image", "url('http://7-themes.com/data_images/out/70/7012333-sunset-snow-landscape.jpg')");
+        $('body').css("background-image", "url('http://www.nytimes.com/images/2016/01/24/nyregion/23snow-hpslide-16/23snow-hpslide-16-superJumbo.jpg')");
         break;
       case "7":
         $( "#icon" ).addClass( "cloudy" );
-        $('body').css("background-image", "url('http://www.socwall.com/images/wallpapers/8008-2816x1880.jpg')");
+        $('body').css("background-image", "url('http://blog.robertstrachan.com/wp-content/gallery/photo-a-day/big-sky.jpg')");
         break;
       case "8":
         $( "#icon" ).addClass( "sunny" );
